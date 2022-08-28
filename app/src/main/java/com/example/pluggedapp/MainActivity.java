@@ -27,7 +27,14 @@ Button btn;
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"kkk",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, PluginApplication.class));
+                try {
+
+
+                    PluginManager.getInstance().installPackage("C:\\Users\\hp\\AndroidStudioProjects\\Embed_unityLibrary_task\\app\\build\\intermediates\\apk\\debug",0);
+                } catch (RemoteException e) {
+
+                    e.printStackTrace();
+                }
             }
         });
 }
