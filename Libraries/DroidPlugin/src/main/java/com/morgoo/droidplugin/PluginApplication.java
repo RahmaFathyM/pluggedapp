@@ -40,14 +40,7 @@ public class PluginApplication extends Application {
     public void onCreate() {
         super.onCreate();
         PluginHelper.getInstance().applicationOnCreate(getBaseContext());
-        try {
 
-
-            PluginManager.getInstance().installPackage("C:\\Users\\hp\\AndroidStudioProjects\\Embed_unityLibrary_task\\app\\build\\intermediates\\apk\\debug",0);
-        } catch (RemoteException e) {
-
-            e.printStackTrace();
-        }
     }
 
 
